@@ -1,0 +1,11 @@
+function performMultiplications(text) {
+    text = text.replace(/(-?\d+)\s*\*\s*(-?\d+(\.\d+)?)/g, multiply);
+
+    function multiply(match, num1, num2) {
+        return Number(num1) * Number(num2);
+    }
+
+    console.log(text);
+}
+
+performMultiplications('My bill: 2*2.50 (beer); 2* 1.20 (kepab); -2  * 0.5 (deposit).');
